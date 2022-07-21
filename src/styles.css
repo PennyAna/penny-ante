@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Spectral');
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
+:root {
+    --dark-liver-horses: #4F392D;
+    --seal-brown: #592202;
+    --cafe-noir: #51331C;
+       --coffee: #735236;
+    --raw-umber: #82644D;
+    --cafe-au-lait: #A57F59;
+     --brown-sugar: #BF754B;
+       --copper-red: #BF7458;
+    --tan: #D9B596;
+    --khaki-web: #BCAA91; 
+     --deep-champagne: #F2CDA0;
+    --light-orange: #F0C9A1;
+    --ny-pink: #D98989;
+    --red-violet: #8C2E40;
+    --silver-pink: #D9BEB4;
+    --pastel-pink: #D9A3A3;
+      --alabaster: #F2F1E9; 
+      --gainsboro: #D7D9D9;
+   --wintergreen-dream: #669489;
+     --morning-blue: #84A696;
+      --indigo-dye: #1F4761;
+      --oxford-blue: #011936;
+      --black-coffee: #403231;
+    --raisin-black: #261D1D;
+    --smoky-black: #0D0000;
+    --black-bean: #3C0000;
+  }
+
+  body {
+      background-color: var(--alabaster);
+      font-family: 'Helvetica', sans-serif;
+  }
+  iframe {
+    height: 450px;
+    width: 600px;
+    margin: 20px;
+    border: 5px solid var(--black-bean);
+    border-radius: 5px;
+  }
+.navbar {
+    background-color: var(--cafe-au-lait);
+    font-family: 'Spectral', serif;
+    border-bottom: 8px solid var(--seal-brown);
+    padding-left: 20px;
+}
+.navbar-brand {
+  font-size: 40px;
+  color: var(--black-bean);
+}
+.nav-link {
+  font-size: 20px;
+  margin-left: 350px;
+  color: var(--oxford-blue);
+}
+.location-detail {
+  padding-left: 150px;
+  display: flex;
+  max-width: 40%;
+}
+.location-list {
+  max-width: 40%;
+  display: flex;
+  float: left;
+}
+.scrollMe {
+  max-height: 450px;
+  margin-bottom: 10px;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+}

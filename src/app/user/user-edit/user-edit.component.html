@@ -1,0 +1,53 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <form id="user-edit" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              size="120"
+              required
+              max="120"
+              [ngModel]="user?.name"
+              #name="ngModel"
+              [value]="originalUser?.name">
+              <span [ngStyle]="{'border':!name.invalid ? '1px solid red' : '1px solid black', 'display':!name.invalid || name.pristine ? 'none' : 'block'}">
+              <div class="alert alert-danger">Name is required.</div>
+            </span>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="id">Id: </label>
+            <input
+              type="text"
+              id="id"
+              name="id"
+              class="form-control invalid"
+              size="150"
+              max="255"
+              [ngModel]="user?.id"
+              #id="ngModel"
+              [value]="originalUser?.id">
+              <span [ngStyle]="{'border':!id.invalid ? '1px solid red' : '1px solid black', 'display':!id.invalid || id.pristine ? 'none' : 'block'}">
+                <div class="alert alert-danger">Enter a valid id number.</div>
+              </span>
+          </div>
+        </div>
+          
+        <div class="row">
+          <div class="col-xs-12 btn-toolbar">
+            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save</button>
+            <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+  </div>
+  

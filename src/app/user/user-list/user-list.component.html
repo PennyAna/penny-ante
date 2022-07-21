@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <span class="title pad-left-right">Users</span>
+          </div>
+          <div class="row">
+          <div class="pull-right pad-left-right">
+            <a [routerLink]="['new']" class="btn btn-success">New User</a>
+        </div>
+      </div>
+    </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 margin-top">
+              <app-user-item *ngFor="let user of users" [user]="user"></app-user-item>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dumping data requires string interpolation sed if within tag, can use string interpolation instead, see h4 contents vs img.alt content-->
